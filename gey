@@ -14,6 +14,7 @@ getrenv().Commands = {
     ["UnDropfps"] = "undropfps",
     ["Lagserver"] = "lagserver",
     ["UnLagserver"] = "unlagserver"
+    ["Resize"] = "resize"
 }
 if not game:IsLoaded() then
 game.Loaded:Wait()
