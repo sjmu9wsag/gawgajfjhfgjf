@@ -279,3 +279,15 @@ ts:Teleport(game.PlaceId, p)
         end
     end
 end)
+
+--// Resize
+game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(messageData)
+    if messageData.FromSpeaker == Config.Host and Client.Name ~= Config.Host then
+        msg = messageData.Message
+        local args = msg:split(" ")
+        if args[1] == Config.Prefix .. "" .. Commands.Resize then
+game.Players.LocalPlayer.Character.Humanoid.BodyDepthScale:Destroy()
+game.Players.LocalPlayer.Character.Humanoid.BodyWidthScale:Destroy()
+        end
+    end
+end)
